@@ -25,8 +25,8 @@ const taskSchema = new mongoose.Schema({
     },
 
     completed:{
-type : Boolean,
-default: false
+        type : Boolean,
+        default: false
     }, 
 
     createdAt :{
@@ -35,8 +35,7 @@ default: false
     }
 
 });
-
-
+//Uses for avoid duplication that the duplicate model can not be created
 const Task = mongoose.model.Task || mongoose.model("Task", taskSchema);
 
 export default Task;

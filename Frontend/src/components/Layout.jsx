@@ -6,7 +6,6 @@ import { Outlet } from 'react-router-dom';
 import axios, { Axios } from 'axios';
 
 
-
 const Layout = ({onLogout, user}) => {
 
  const [tasks, setTasks] = useState([]);
@@ -195,4 +194,4 @@ finally{
   )
 }
 
-export default Layout
+export default Layout 

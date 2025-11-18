@@ -43,7 +43,7 @@ export const getTasks = async (req, res)=>{
 export const getTasksById = async (req, res)=>{
     try{
         const tasks = await Task.findOne({_id: req.params.id, owner: req.user.id});
-       if(!task) return res.status(400).json({success: false, message:"task not found"});
+       if(!tasks) return res.status(400).json({success: false, message:"task not found"});
     }
 
     catch (err){

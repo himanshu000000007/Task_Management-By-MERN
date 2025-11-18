@@ -10,6 +10,7 @@ const userRouter = express.Router();
 userRouter.post('/register',registerUser);
 userRouter.post('/login',loginUser);
 
+
 //PRIVATE ROUTES protect also
 
 userRouter.get('/me',authMiddleware,getCurrentUser);

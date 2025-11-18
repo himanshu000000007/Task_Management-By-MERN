@@ -52,7 +52,7 @@ export async function loginUser(req,res){
 
     try{
         const user = await User.findOne({email})
-        if(!User){
+        if(!user){
             return res.status(401).json({success: false, message:"Tnvalid Credentials. "});
 
         }
@@ -71,7 +71,7 @@ export async function loginUser(req,res){
     }
 }
 
-// GAT CURRENT USER FUNCTION
+// GET CURRENT USER FUNCTION
 
 export async function getCurrentUser(req,res){
     try{
